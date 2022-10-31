@@ -25,7 +25,26 @@ def Euclid(x,y):
     return x
 
 def main():
-    print(Euclid(250, 111))
+    da_list = []
+
+    while True:
+        try:
+            num = int(input("Enter an integer: "))
+        except ValueError:
+            print("Please enter a valid integer pls!")
+            continue
+        da_list.append(num)
+
+        try:
+            num = int(input("Enter Second Integer: "))
+        except ValueError:
+            print("Please enter a valid integer pls!")
+            continue
+        da_list.append(num)
+
+        break
+
+    print(Euclid(da_list[0], da_list[1]))
 
 
 if __name__ == "__main__":
